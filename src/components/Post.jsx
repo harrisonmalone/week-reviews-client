@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import showdown from "showdown";
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
 export function Post(props) {
   const [post, setPost] = useState(null);
@@ -15,6 +17,10 @@ export function Post(props) {
       const html = converter.makeHtml(foundPost.body);
       setHtml(html);
       setPost(foundPost)
+    } else {
+      document.querySelectorAll("pre code").forEach((block) => {
+        hljs.highlightBlock(block);
+      });
     }
   }, [props.posts, post, week, year]);
 
