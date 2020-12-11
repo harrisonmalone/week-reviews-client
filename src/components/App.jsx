@@ -27,7 +27,6 @@ export function App() {
         <Route exact path="/" render={(props) => <Home {...props} posts={posts} />} />
         <Route exact path="/posts/:year/:week" render={(props) => <Post {...props} posts={posts} />} />
         <Route exact path="/projects" component={Projects} />
-        <Route exact path="/new" render={() => window.location.href = "https://docs.google.com/spreadsheets/d/1FuDWJabW3qhn7Eo0R4ESFLaDpZybYTQnSJebI3AgKKI"} />
       </Switch>
     </Container>
   );
