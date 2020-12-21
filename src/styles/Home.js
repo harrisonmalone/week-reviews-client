@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 0px 20px;
 `
 
 export const Weeks = styled.div`
@@ -16,7 +17,10 @@ export const Weeks = styled.div`
 
 export const AboutMe = styled.div`
   border: 1px solid black;
-  padding: 0px 30px;
+  padding: 0px 20px;
+  p {
+    margin: 0px;
+  }
 ` 
 
 export const MyLink = styled(Link)`
