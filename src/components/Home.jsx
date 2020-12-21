@@ -35,7 +35,7 @@ export function Home(props) {
         </p>
       </AboutMe>
       <Weeks>
-        <h2>Week Reviews</h2>
+        <h2>Posts</h2>
         {renderWeeks()}
       </Weeks>
     </>
