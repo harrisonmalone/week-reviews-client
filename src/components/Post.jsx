@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import showdown from "showdown";
 import hljs from 'highlight.js';
+import { Link } from 'react-router-dom'
+import moment from 'moment'
 
 export function Post(props) {
   const [post, setPost] = useState(null);
@@ -34,7 +36,8 @@ export function Post(props) {
   } else {
     return (
         <>
-          <h3>{post.title}</h3>
+          <h3 style={{marginBottom: "15px"}}><Link to={window.location.pathname}>{post.title}</Link></h3>
+          <p style={{margin: "0px", fontSize: "large"}}>{moment(post.date).format('MMMM Do YYYY')}</p>
           <div dangerouslySetInnerHTML={createMarkup()}></div>
         </>
     );

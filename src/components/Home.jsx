@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Weeks, AboutMe } from "../styles/Home";
 import { Link } from 'react-router-dom'
 import { PostsContext } from '../context/PostsContext'
+import moment from 'moment'
 
 export function Home(props) {
   const { posts } = useContext(PostsContext)
@@ -20,9 +21,10 @@ export function Home(props) {
         {posts.map((post, index) => {
           return (
             <div key={index}>
-              <h3><Link to={{
+              <h3 style={{marginBottom: "15px"}}><Link to={{
                 pathname: post.slug
               }}>{post.title}</Link></h3>
+              <p style={{margin: "0px", fontSize: "large"}}>{moment(post.date).format('MMMM Do YYYY')}</p>
             </div>
           )
         })}
