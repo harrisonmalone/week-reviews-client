@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
-  max-width: 600px;
+  max-width: 800px;
   margin: 0px auto;
   padding: 0px 20px;
 `
@@ -16,7 +16,7 @@ export const Weeks = styled.div`
 `
 
 export const AboutMe = styled.div`
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 20px;
   p {
     margin: 0px;

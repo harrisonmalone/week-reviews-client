@@ -1,28 +1,29 @@
 import { useState, useEffect } from "react";
 import showdown from "showdown";
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
 
 export function Post(props) {
   const [post, setPost] = useState(null);
   const [html, setHtml] = useState("");
-  const { year, week } = props.match.params;
+
+  useEffect(() => {
+    document.querySelectorAll("pre code").forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+  });
 
   useEffect(() => {
     if (!post) {
-      const foundPost = props.posts.find((obj) => {
-        return obj.year === year && obj.week === week
+      const title = props.match.params.title
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/posts/${title}`)
+      .then((res) => res.json())
+      .then((post) => {
+        const converter = new showdown.Converter();   
+        setHtml(converter.makeHtml(post.body))
+        setPost({ title: post.title, date: post.date })
       })
-      const converter = new showdown.Converter();
-      const html = converter.makeHtml(foundPost.body);
-      setHtml(html);
-      setPost(foundPost)
-    } else {
-      document.querySelectorAll("pre code").forEach((block) => {
-        hljs.highlightBlock(block);
-      });
     }
-  }, [props.posts, post, week, year]);
+  }, [post, props.match.params.title])
 
   const createMarkup = () => {
     return { __html: html };
@@ -33,7 +34,7 @@ export function Post(props) {
   } else {
     return (
         <>
-          <h2>Week {post.week}, {post.year}</h2>
+          <h3>{post.title}</h3>
           <div dangerouslySetInnerHTML={createMarkup()}></div>
         </>
     );

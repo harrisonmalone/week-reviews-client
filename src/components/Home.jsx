@@ -1,29 +1,10 @@
-import React from "react";
-import { Weeks, AboutMe, MyLink } from "../styles/Home";
+import React, { useContext } from "react";
+import { Weeks, AboutMe } from "../styles/Home";
 import { Link } from 'react-router-dom'
+import { PostsContext } from '../context/PostsContext'
 
 export function Home(props) {
-  function renderWeeks() {
-    let prevYear;
-    return props.posts.map((post, index) => {
-      if (prevYear !== post.year) {
-        prevYear = post.year;
-        return (
-          <React.Fragment key={index}>
-            <h3>{post.year}</h3>
-            <MyLink to={`/posts/${post.year}/${post.week}`}>{post.week}</MyLink>
-          </React.Fragment>
-        );
-      } else {
-        return (
-          <React.Fragment key={index}>
-            <MyLink to={`/posts/${post.year}/${post.week}`}>{post.week}</MyLink>
-          </React.Fragment>
-        );
-      }
-    });
-  }
-
+  const { posts } = useContext(PostsContext)
   return (
     <>
       <AboutMe>
@@ -36,7 +17,15 @@ export function Home(props) {
       </AboutMe>
       <Weeks>
         <h2>Posts</h2>
-        {renderWeeks()}
+        {posts.map((post, index) => {
+          return (
+            <div key={index}>
+              <h3><Link to={{
+                pathname: post.slug
+              }}>{post.title}</Link></h3>
+            </div>
+          )
+        })}
       </Weeks>
     </>
   );
