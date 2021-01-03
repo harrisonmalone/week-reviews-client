@@ -8,9 +8,6 @@ export function App() {
   return (
     <PostsProvider>
       <Container>
-        <h1>
-          <Link to="/">hmalone</Link>
-        </h1>
         <Routes />
       </Container>
     </PostsProvider>
