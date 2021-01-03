@@ -36,6 +36,9 @@ export function Post(props) {
   } else {
     return (
         <>
+          <h1>
+            <Link to="/">hmalone</Link>
+          </h1>
           <h3 style={{marginBottom: "15px"}}><Link to={window.location.pathname}>{post.title}</Link></h3>
           <p style={{margin: "0px", fontSize: "large"}}>{moment(post.date).format('MMMM Do YYYY')}</p>
           <div dangerouslySetInnerHTML={createMarkup()}></div>

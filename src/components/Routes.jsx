@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Post } from "./Post";
 import { Projects } from "./Projects";
@@ -10,9 +10,6 @@ export function Routes(props) {
   return (
     posts && (
       <>
-        <h1>
-          <Link to="/">hmalone</Link>
-        </h1>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Projects} />

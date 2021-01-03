@@ -8,6 +8,9 @@ export function Home(props) {
   const { posts } = useContext(PostsContext)
   return (
     <>
+      <h1>
+        <Link to="/">hmalone</Link>
+      </h1>
       <AboutMe>
         <p>
           Hi, I'm Harrison. I currently work at <a href="https://coderacademy.edu.au/">CoderAcademy</a>{" "}
