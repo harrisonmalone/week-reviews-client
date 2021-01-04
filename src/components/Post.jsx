@@ -4,6 +4,11 @@ import hljs from 'highlight.js';
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 
+function convertTZ(date, tzString) {
+  const correctTimeZone = new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
+  return moment(correctTimeZone).format('MMMM Do YYYY')
+}
+
 export function Post(props) {
   const [post, setPost] = useState(null);
   const [html, setHtml] = useState("");
@@ -40,7 +45,7 @@ export function Post(props) {
             <Link to="/">hmalone</Link>
           </h1>
           <h3 style={{marginBottom: "15px"}}><Link to={window.location.pathname}>{post.title}</Link></h3>
-          <p style={{margin: "0px", fontSize: "large"}}>{moment(post.date).format('MMMM Do YYYY')}</p>
+          <p style={{margin: "0px", fontSize: "large"}}>{convertTZ(post.date, "Australia/Sydney")}</p>
           <div dangerouslySetInnerHTML={createMarkup()}></div>
         </>
     );
