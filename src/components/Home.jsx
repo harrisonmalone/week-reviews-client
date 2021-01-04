@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 import { PostsContext } from '../context/PostsContext'
 import moment from 'moment'
 
+function convertTZ(date, tzString) {
+  const correctTimeZone = new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
+  return moment(correctTimeZone).format('MMMM Do YYYY')
+}
+
 export function Home(props) {
   const { posts } = useContext(PostsContext)
   return (
@@ -27,7 +32,7 @@ export function Home(props) {
               <h3 style={{marginBottom: "15px"}}><Link to={{
                 pathname: post.slug
               }}>{post.title}</Link></h3>
-              <p style={{margin: "0px", fontSize: "large"}}>{moment(post.date).format('MMMM Do YYYY')}</p>
+              <p style={{margin: "0px", fontSize: "large"}}>{convertTZ(post.date, "Australia/Sydney")}</p>
             </div>
           )
         })}
