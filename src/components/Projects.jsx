@@ -12,9 +12,7 @@ export function Projects() {
         <h3>
           <Link to="/">hmalone</Link>
         </h3>
-        <p>
-          This site! My basic blog that pulls posts from an S3 bucket.
-        </p>
+        <p>This site! My basic blog that pulls posts from an S3 bucket.</p>
         <p>
           In 2021 I'm keen to write new technical posts on a weekly basis. I'll
           also just be posting some random thoughts on things every now and
@@ -27,11 +25,15 @@ export function Projects() {
         <p>
           Over the holidays I kind of randomly decided to experiment with
           Apple's MusicKit library. Starting off the small the app slowly become
-          a fully fledged tool for playing and archiving music. 
+          a fully fledged tool for playing and archiving music.
         </p>
         <p>There's three key features:</p>
         <ol>
-          <li>Organizing and updating data about albums in my library, this data includes the Wikipedia entry for the album (which I often enjoy reading) and reviews</li>
+          <li>
+            Organizing and updating data about albums in my library, this data
+            includes the Wikipedia entry for the album (which I often enjoy
+            reading) and reviews
+          </li>
           <li>Playing albums through the Apple Music API</li>
           <li>Sorting and displaying albums in a nice manner</li>
         </ol>
@@ -51,6 +53,14 @@ export function Projects() {
           The app complements the way in which I handle photos using a script to
           rename the actual image files and then uploading them to S3 using
           Transmit.
+        </p>
+        <h3>Wedding Gift Registry</h3>
+        <p>
+          A friends wedding was coming up and I saw he was using Wordpress to
+          organize the gifts people were giving at the event. I suggested I
+          could do something nicer! The gift registry database was seeded with a
+          spreadsheet of values and then the site updates when users select a
+          gift. Users can either buy the gift outright or ask for contributors.
         </p>
       </div>
     </>
