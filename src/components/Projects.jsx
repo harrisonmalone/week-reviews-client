@@ -38,7 +38,7 @@ export function Projects() {
           <li>Sorting and displaying albums in a nice manner</li>
         </ol>
         <h3>
-          <a href="https://memuhree.dev">Memuhree 📸</a>
+          <a href="https://memuhree.dev/">Memuhree 📸</a>
         </h3>
         <p>A photo's app to store memories in.</p>
         <p>
@@ -54,7 +54,11 @@ export function Projects() {
           rename the actual image files and then uploading them to S3 using
           Transmit.
         </p>
-        <h3>Wedding Gift Registry</h3>
+        <h3>
+          <a href="https://gift.suelynandaidan.wedding/">
+            Wedding Gift Registry 💒
+          </a>
+        </h3>
         <p>
           A friends wedding was coming up and I saw he was using Wordpress to
           organize the gifts people were giving at the event. I suggested I
