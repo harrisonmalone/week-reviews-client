@@ -13,8 +13,7 @@ export function Projects() {
           <Link to="/">hmalone</Link>
         </h3>
         <p>
-          This site! I made a notes app and then wasn't too happy with it so
-          replaced it with this.
+          This site! My basic blog that pulls posts from an S3 bucket.
         </p>
         <p>
           In 2021 I'm keen to write new technical posts on a weekly basis. I'll
@@ -28,7 +27,7 @@ export function Projects() {
         <p>
           Over the holidays I kind of randomly decided to experiment with
           Apple's MusicKit library. Starting off the small the app slowly become
-          a fully fledged tool for playing a achieving music. 
+          a fully fledged tool for playing and archiving music. 
         </p>
         <p>There's three key features:</p>
         <ol>
