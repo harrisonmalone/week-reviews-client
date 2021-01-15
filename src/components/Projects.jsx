@@ -17,11 +17,25 @@ export function Projects() {
           replaced it with this.
         </p>
         <p>
-          The idea is to write a new post every week about my life. How I'm
-          feeling, what I'm doing; maybe I'm working on a project and I wanted
-          to talk about that. Maybe I went on holiday and wanted to share some
-          images and thoughts from the trip.
+          In 2021 I'm keen to write new technical posts on a weekly basis. I'll
+          also just be posting some random thoughts on things every now and
+          then.
         </p>
+        <h3>
+          <a href="https://hahrmuhnee.dev/">Hahrmuhnee 💿</a>
+        </h3>
+        <p>An Apple Music client.</p>
+        <p>
+          Over the holidays I kind of randomly decided to experiment with
+          Apple's MusicKit library. Starting off the small the app slowly become
+          a fully fledged tool for playing a achieving music. 
+        </p>
+        <p>There's three key features:</p>
+        <ol>
+          <li>Organizing and updating data about albums in my library, this data includes the Wikipedia entry for the album (which I often enjoy reading) and reviews</li>
+          <li>Playing albums through the Apple Music API</li>
+          <li>Sorting and displaying albums in a nice manner</li>
+        </ol>
         <h3>
           <a href="https://memuhree.dev">Memuhree 📸</a>
         </h3>
