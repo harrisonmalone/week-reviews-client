@@ -3,7 +3,7 @@
 body {
   font-family: 'Cormorant Garamond', serif;
   font-size: x-large;
-  background-color: #3B3F45;
+  background-color: rgb(9, 73, 116);
   color: white;
 }
 
@@ -16,4 +16,8 @@ a {
   font-weight: 900;
   color: white;
   border-bottom: 1px dotted white;
+}
+
+.hljs {
+  background-color: mintcream;
 }
