@@ -2,9 +2,7 @@
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  font-size: large;
-  background-color: rgb(9, 73, 116);
-  color: white;
+  font-size: x-large;
 }
 
 h1, h2, h3, h4, h5 {
@@ -13,11 +11,6 @@ h1, h2, h3, h4, h5 {
 
 a {
   text-decoration: none;
-  font-weight: 900;
-  color: white;
-  border-bottom: 1px dotted white;
-}
-
-.hljs {
-  background-color: mintcream;
+  border-bottom: 1px dashed rgb(172, 172, 172);
+  color: black;
 }

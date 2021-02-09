@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Post } from "./Post";
 import { Projects } from "./Projects";
+import { Privacy } from "./Privacy"
 import { PostsContext } from "../context/PostsContext";
 
 export function Routes(props) {
@@ -13,6 +14,7 @@ export function Routes(props) {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/privacy/:name" component={Privacy} />
           <Route exact path="/:year/:month/:title" component={Post} />
         </Switch>
       </>

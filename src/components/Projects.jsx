@@ -10,6 +10,17 @@ export function Projects() {
       <div>
         <h2>Projects</h2>
         <h3>
+          <a href="/">Stradbroke 💸</a>
+        </h3>
+        <p>My first ever iOS app!</p>
+        <p>
+          If you've ever found yourself wondering what subscriptions you
+          actually pay for this is the app for you. Track all your subscriptions
+          in a simple and intuitive manner. Keep on top of upcoming bills and
+          know exactly how much you're paying on a weekly, monthly and yearly
+          basis.
+        </p>
+        <h3>
           <Link to="/">hmalone</Link>
         </h3>
         <p>This site! My basic blog that pulls posts from an S3 bucket.</p>

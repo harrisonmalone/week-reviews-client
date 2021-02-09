@@ -16,7 +16,7 @@ export const Weeks = styled.div`
 `
 
 export const AboutMe = styled.div`
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 20px;
   p {
     margin: 0px;
