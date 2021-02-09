@@ -20,6 +20,7 @@ export function Projects() {
           know exactly how much you're paying on a weekly, monthly and yearly
           basis.
         </p>
+        <p>If you need support please email harrison.malone@hey.com</p>
         <h3>
           <Link to="/">hmalone</Link>
         </h3>
