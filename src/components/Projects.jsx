@@ -10,7 +10,7 @@ export function Projects() {
       <div>
         <h2>Projects</h2>
         <h3>
-          <a href="/">Stradbroke 💸</a>
+          <a href="https://apps.apple.com/au/app/stradbroke/id1552595234">Stradbroke 💸</a>
         </h3>
         <p>My first ever iOS app!</p>
         <p>
