@@ -20,3 +20,7 @@ blockquote {
   padding-left: 20px;
   margin: 0px;
 }
+
+code {
+  word-wrap: break-word;
+}
