@@ -18,9 +18,8 @@ export function Home(props) {
       </h1>
       <AboutMe>
         <p>
-          Hi, I'm Harrison. I currently work at <a href="https://coderacademy.edu.au/">CoderAcademy</a>{" "}
-          where I've mentored around 100 students leading classes and assisting
-          with content development. Here are my current <Link to="/projects">projects</Link>
+          Hi, I'm Harrison. I currently work at <a href="https://99designs.com.au/">99designs</a>{" "}
+         as a software engineer. Here are my current <Link to="/projects">projects</Link>
           .
         </p>
       </AboutMe>
