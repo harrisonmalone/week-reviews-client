@@ -21,6 +21,5 @@ blockquote {
 
 code {
   word-wrap: break-word;
-  display: inline-block;
   background-color: #fff;
 }
