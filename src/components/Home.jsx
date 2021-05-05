@@ -23,9 +23,11 @@ export function Home() {
       </h1>
       <AboutMe>
         <p>
-          Hi, I'm Harrison. I currently work at{" "}
-          <a href="https://99designs.com.au/">99designs</a> as a software
-          engineer. Here are my current <Link to="/projects">projects</Link>, <a href="/">focusses for the year</a> and the <a href="/">software and hardware I use</a> on a daily basis.
+          Hi, I'm Harrison. I currently work at 99designs as a software
+          engineer. You might want to check out my{" "}
+          <Link to="/projects">current projects</Link>,{" "}
+          <a href="/">the things I’m learning this year</a> or my{" "}
+          <a href="/">daily uses</a>.
         </p>
       </AboutMe>
       <Weeks>
