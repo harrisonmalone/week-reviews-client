@@ -9,6 +9,9 @@ export const Container = styled.div`
 `
 
 export const Weeks = styled.div`
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
   p {
     a {
       margin-right: 5px;

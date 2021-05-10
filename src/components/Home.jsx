@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Weeks, AboutMe } from "../styles/Home";
+import { Footer } from "./Footer";
 import { Link } from "react-router-dom";
 import { PostsContext } from "../context/PostsContext";
 import moment from "moment";
@@ -51,33 +52,7 @@ export function Home() {
           );
         })}
       </Weeks>
-      <hr
-        style={{
-          margin: "20px 0px",
-        }}
-      />
-      <div
-        style={{
-          marginBottom: "20px",
-        }}
-      >
-        <a
-          href="/"
-          style={{
-            marginRight: "10px",
-          }}
-        >
-          Archive
-        </a>
-        <a
-          href="/"
-          style={{
-            marginRight: "10px",
-          }}
-        >
-          RSS
-        </a>
-      </div>
+      <Footer />
     </>
   );
 }

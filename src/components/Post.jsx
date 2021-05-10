@@ -44,7 +44,7 @@ export function Post(props) {
           <h1>
             <Link to="/">hmalone</Link>
           </h1>
-          <h3 style={{marginBottom: "15px"}}><Link to={window.location.pathname}>{post.title}</Link></h3>
+          <h2 style={{marginBottom: "15px"}}><Link to={window.location.pathname}>{post.title}</Link></h2>
           <p style={{margin: "0px", fontSize: "large"}}>{convertTZ(post.date, "Australia/Sydney")}</p>
           <div dangerouslySetInnerHTML={createMarkup()}></div>
         </>
