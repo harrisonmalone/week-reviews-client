@@ -14,7 +14,7 @@ export function Footer() {
         Archive
       </a>
       <a
-        href="http://github.com/harrisonmalone"
+        href="https://github.com/harrisonmalone"
         style={{
           marginRight: "10px",
         }}
