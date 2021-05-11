@@ -14,12 +14,12 @@ export function Footer() {
         Archive
       </a>
       <a
-        href="/"
+        href="http://github.com/harrisonmalone"
         style={{
           marginRight: "10px",
         }}
       >
-        RSS
+        GitHub
       </a>
     </div>
   );
