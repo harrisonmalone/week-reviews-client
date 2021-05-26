@@ -28,7 +28,7 @@ export function Home() {
           engineer. You might want to check out my{" "}
           <Link to="/projects">current projects</Link>,{" "}
           <Link to="/learning">the things I’m learning this year</Link> or my{" "}
-          <a href="/uses">daily uses</a>.
+          <Link to="/uses">daily uses</Link>.
         </p>
       </AboutMe>
       <Weeks>
