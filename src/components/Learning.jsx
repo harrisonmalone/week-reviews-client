@@ -10,15 +10,15 @@ export function Learning() {
       <div>
         <h2>Things I'm Learning This Year</h2>
         <h3>
-          <a href="">Go</a>
+          <a href="https://golang.org/">Go </a>
         </h3>
         <p>Learning Go.</p>
         <h3>
-          <a href="">TypeScript</a>
+          <a href="http://typescriptlang.org/">TypeScript</a>
         </h3>
         <p>Learning TypeScript.</p>
         <h3>
-          <a href="">GraphQL</a>
+          <a href="https://graphql.org/">GraphQL</a>
         </h3>
         <p>Learning GraphQL.</p>
         <h3>

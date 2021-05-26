@@ -27,7 +27,7 @@ export function Home() {
           Hi, I'm Harrison. I currently work at 99designs as a software
           engineer. You might want to check out my{" "}
           <Link to="/projects">current projects</Link>,{" "}
-          <Link href="/learning">the things I’m learning this year</Link> or my{" "}
+          <Link to="/learning">the things I’m learning this year</Link> or my{" "}
           <a href="/uses">daily uses</a>.
         </p>
       </AboutMe>
