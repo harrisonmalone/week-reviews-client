@@ -10,12 +10,12 @@ export function Privacy(props) {
         <h1>
           <Link to="/">hmalone</Link>
         </h1>
-        <h3>{_.capitalize(name)} Privacy Policy</h3>
+        <h2>{_.capitalize(name)} Privacy Policy</h2>
         <p>
           This policy applies to all information collected or submitted on the
           Stradbroke iOS app.
         </p>
-        <h3>Information we collect</h3>
+        <h2>Information we collect</h2>
         <p>
           When new Stradbroke accounts are created the email addresses and a
           hashed password are stored in the database. Any new subscriptions that
@@ -25,16 +25,16 @@ export function Privacy(props) {
           Email addresses are only used for logging in. We don’t send
           promotional emails.
         </p>
-        <h3>Security</h3>
+        <h2>Security</h2>
         <p>
           We implement a variety of security measures to help keep your
           information secure. For instance, all communication with the app and
           website requires HTTPS with certificate pinning. Passwords are hashed,
           not stored, using industry-standard methods (currently bcrypt).
         </p>
-        <h3>Your Consent</h3>
+        <h2>Your Consent</h2>
         <p>By using our site or apps, you consent to our privacy policy.</p>
-        <h3>Contacting Us</h3>
+        <h2>Contacting Us</h2>
         <p>
           If you have questions regarding this privacy policy, you may email
           harrison.malone@hey.com
