@@ -12,13 +12,15 @@ export function Uses() {
         <h3>Hardware</h3>
         <ul>
           <li>MacBook Pro 13 Inch (2020)</li>
-          <li>iPhone 10R</li>
+          <li>iPhone 10XR</li>
+          <li>Nintendo Switch</li>
         </ul>
         <h3>Software</h3>
-          <li>MacOS</li>
-          <li>VSCode</li>
-          <li>iTerm</li>
-          <li>Transmit</li>
+          <ul>
+            <li>MacOS</li>
+            <li>VSCode</li>
+            <li>iTerm</li>
+          </ul>
       </div>
     </>
   );
