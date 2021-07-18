@@ -15,7 +15,7 @@ function convertTZ(date, tzString) {
 }
 
 function createSlug(post) {
-  return `/${post.link.split("/").slice(3, 6).join("/")}`;
+  return `/${post.id.split("/").slice(3, 6).join("/")}`;
 }
 
 export function Archive() {
@@ -41,7 +41,7 @@ export function Archive() {
                   </Link>
                 </h3>
                 <p style={{ margin: "0px", fontSize: "large" }}>
-                  {convertTZ(post.pubDate, "Australia/Sydney")}
+                  {convertTZ(post.updated, "Australia/Sydney")}
                 </p>
               </div>
             );

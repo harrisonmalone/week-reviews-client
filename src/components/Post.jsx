@@ -22,11 +22,11 @@ export function Post() {
   useEffect(() => {
     if (posts.length > 0) {
       const foundPost = posts.find((post) => {
-        const slug = post.link.split("/").slice(3, 6).join("/");
+        const slug = post.id.split("/").slice(3, 6).join("/");
         return `/${slug}` === location.pathname;
       });
       setPost(foundPost);
-      setHtml(foundPost["content:encoded"]);
+      setHtml(foundPost.content);
     }
   }, [posts, location.pathname]);
 
@@ -37,7 +37,9 @@ export function Post() {
   });
 
   const createMarkup = () => {
-    return { __html: html };
+    const txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return { __html: txt.value };
   };
 
   return (
@@ -50,7 +52,7 @@ export function Post() {
           <Link to={window.location.pathname}>{post.title}</Link>
         </h2>
         <p style={{ margin: "0px", fontSize: "large" }}>
-          {convertTZ(post.pubDate, "Australia/Sydney")}
+          {convertTZ(post.updated, "Australia/Sydney")}
         </p>
         <div dangerouslySetInnerHTML={createMarkup()}></div>
       </>

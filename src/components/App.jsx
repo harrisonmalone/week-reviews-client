@@ -14,7 +14,7 @@ export function App() {
       .then((res) => res.text())
       .then((data) => {
         const result = parser.parse(data);
-        const posts = result.rss.channel.item;
+        const posts = result.feed.entry
         setPosts(posts);
       });
   }, []);
