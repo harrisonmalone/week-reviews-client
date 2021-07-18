@@ -28,3 +28,4 @@ yarn-error.log*
 .netlify
 
 /src/rss.xml
+/public/rss.xml

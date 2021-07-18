@@ -1,5 +1,3 @@
-import rssFilePath from "../rss.xml";
-
 export function Footer() {
   return (
     <div
@@ -23,7 +21,7 @@ export function Footer() {
       >
         GitHub
       </a>
-      <a href={rssFilePath}>RSS</a>
+      <a href="/rss.xml">RSS</a>
     </div>
   );
 }
