@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Weeks, AboutMe } from "../styles/Home";
 import { Footer } from "./Footer";
 import { Link } from "react-router-dom";
-import { PostsContext } from "../context/PostsContext";
 import moment from "moment";
+import { PostsContext } from "../context/PostsContext";
 
 function convertTZ(date, tzString) {
   const correctTimeZone = new Date(
@@ -14,9 +14,14 @@ function convertTZ(date, tzString) {
   return moment(correctTimeZone).format("MMMM Do YYYY");
 }
 
+function createSlug(post) {
+  return `/${post.link.split("/").slice(3, 6).join("/")}`;
+}
+
 export function Home() {
-  const { posts } = useContext(PostsContext);
+  const posts = useContext(PostsContext);
   const firstTenPosts = posts.slice(0, 10);
+
   return (
     <>
       <h1>
@@ -39,14 +44,14 @@ export function Home() {
               <h3 style={{ marginBottom: "15px" }}>
                 <Link
                   to={{
-                    pathname: post.slug,
+                    pathname: createSlug(post),
                   }}
                 >
                   {post.title}
                 </Link>
               </h3>
               <p style={{ margin: "0px", fontSize: "large" }}>
-                {convertTZ(post.date, "Australia/Sydney")}
+                {convertTZ(post.pubDate, "Australia/Sydney")}
               </p>
             </div>
           );

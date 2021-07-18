@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { PostsContext } from "../context/PostsContext";
 import { Weeks } from "../styles/Home";
 import moment from "moment";
-import { Footer } from './Footer'
+import { Footer } from "./Footer";
+import { PostsContext } from "../context/PostsContext";
 
 function convertTZ(date, tzString) {
   const correctTimeZone = new Date(
@@ -14,8 +14,12 @@ function convertTZ(date, tzString) {
   return moment(correctTimeZone).format("MMMM Do YYYY");
 }
 
+function createSlug(post) {
+  return `/${post.link.split("/").slice(3, 6).join("/")}`;
+}
+
 export function Archive() {
-  const { posts } = useContext(PostsContext);
+  const posts = useContext(PostsContext);
   return (
     <>
       <h1>
@@ -30,14 +34,14 @@ export function Archive() {
                 <h3 style={{ marginBottom: "15px" }}>
                   <Link
                     to={{
-                      pathname: post.slug,
+                      pathname: createSlug(post),
                     }}
                   >
                     {post.title}
                   </Link>
                 </h3>
                 <p style={{ margin: "0px", fontSize: "large" }}>
-                  {convertTZ(post.date, "Australia/Sydney")}
+                  {convertTZ(post.pubDate, "Australia/Sydney")}
                 </p>
               </div>
             );
