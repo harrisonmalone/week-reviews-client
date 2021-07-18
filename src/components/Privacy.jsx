@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import _ from 'lodash'
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
  
 export function Privacy(props) {
   const name = props.match.params.name;
@@ -10,7 +13,7 @@ export function Privacy(props) {
         <h1>
           <Link to="/">hmalone</Link>
         </h1>
-        <h2>{_.capitalize(name)} Privacy Policy</h2>
+        <h2>{capitalizeFirstLetter(name)} Privacy Policy</h2>
         <p>
           This policy applies to all information collected or submitted on the
           Stradbroke iOS app.
