@@ -19,7 +19,8 @@ export function App() {
       });
   }, []);
 
-  return (
+  const postsPopulated = posts.length > 0
+  return postsPopulated && (
     <PostsContext.Provider value={posts}>
       <Container>
         <Routes />

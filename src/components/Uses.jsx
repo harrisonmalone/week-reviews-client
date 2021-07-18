@@ -14,6 +14,7 @@ export function Uses() {
           <li>MacBook Pro 13 Inch (2020)</li>
           <li>iPhone 10XR</li>
           <li>Nintendo Switch</li>
+          <li>AirPods Pro</li>
         </ul>
         <h3>Software</h3>
           <ul>
